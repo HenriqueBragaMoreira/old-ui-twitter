@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import twetterLogo from "../assets/logo-twitter.svg";
 import "./Sidebar.css";
 import {
@@ -16,10 +17,10 @@ export function Sidebar() {
     <aside className="sidebar">
       <img className="logo" src={twetterLogo} alt="" />
       <nav className="main-navigation">
-        <a className="active" href="">
+        <NavLink to="/">
           <House weight="fill" />
           Home
-        </a>
+        </NavLink>
         <a href="">
           <Hash />
           Explorer

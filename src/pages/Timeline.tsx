@@ -3,6 +3,12 @@ import { Separator } from "../components/Separator";
 import { Tweet } from "../components/Tweet";
 import "./Timeline.css";
 
+const tweets = [
+  "Meu dia está sendo bem alegre",
+  "Gosto quando me elogiam",
+  "Estar aprendendo a programar é incrivel",
+];
+
 export function Timeline() {
   return (
     <main className="timeline">
@@ -21,8 +27,9 @@ export function Timeline() {
 
       <Separator />
 
-      <Tweet />
-      <Tweet />
+      {tweets.map((tweet) => (
+        <Tweet key={tweet} content={tweet} />
+      ))}
     </main>
   );
 }
